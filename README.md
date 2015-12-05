@@ -18,6 +18,10 @@ resides next to the `Dockefile`.
 
     $ docker build -t ovftool .
 
+Or fetch:
+
+    $ docker pull djui/ovftool
+
 
 ## Usage
 
