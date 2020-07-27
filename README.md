@@ -7,12 +7,12 @@ OVF/OVA/VMX files.
 
 ## Build
 
-#### Download _VMware OVF Tool for Linux 64-bit_ version _4.1.0_
+#### Download _VMware OVF Tool for Linux 64-bit_ version _4.4.0_
 
-    $ open https://my.vmware.com/group/vmware/details?downloadGroup=OVFTOOL410&productId=491
+    $ open https://my.vmware.com/group/vmware/downloads/get-download?downloadGroup=OVFTOOL440
 
-The downloaded file `VMware-ovftool-4.1.0-2459827-lin.x86_64.bundle` must
-resides next to the `Dockefile`.
+The downloaded file `VMware-ovftool-4.4.0-15722219-lin.x86_64.bundle` must
+resides next to the `Dockerfile`.
 
 #### Create Docker image
 
@@ -27,8 +27,7 @@ Or fetch:
 
 
 ### Verify OVF schema
-
-    $ docker run --rm -it -v my_appliance.ova:/tmp/my_appliance.ova ovftool --schemaValidate /tmp/my_appliance.ova
+    $ docker run --rm -it -v $(pwd):/tmp djui/ovftool --schemaValidate /tmp/my_appliance.ova 
     OVF version:   1.0
     VirtualApp:    false
     Name:          my_appliance
@@ -64,8 +63,7 @@ Or fetch:
 
 
 ### Default Usage
-
-    $ docker run --rm -it -v my_appliance.ova:/tmp/my_appliance.ova ovftool --help
+    $ docker run --rm -it -v $(pwd):/tmp djui/ovftool --help
     Usage: ovftool [options] <source> [<target>]
     where
     <source>: Source URL locator to an OVF package, VMX file, or virtual machine in
