@@ -1,7 +1,9 @@
-FROM ubuntu:15.10
+FROM ubuntu:18.04
 MAINTAINER Uwe Dauernheim <uwe@dauernheim.net>
 
-ENV OVFTOOL_FILENAME=VMware-ovftool-4.1.0-2459827-lin.x86_64.bundle
+# Suppress warning about UTF-8
+ENV LC_CTYPE=POSIX
+ENV OVFTOOL_FILENAME=VMware-ovftool-4.4.0-15722219-lin.x86_64.bundle
 
 ADD $OVFTOOL_FILENAME /tmp/
 
