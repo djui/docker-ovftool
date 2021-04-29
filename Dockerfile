@@ -1,5 +1,5 @@
-FROM ubuntu:18.04
-MAINTAINER Uwe Dauernheim <uwe@dauernheim.net>
+FROM ubuntu:20.04
+LABEL MAINTAINER "Uwe Dauernheim <uwe@dauernheim.net>"
 
 # Suppress warning about UTF-8
 ENV LC_CTYPE=POSIX
